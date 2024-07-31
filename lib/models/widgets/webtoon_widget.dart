@@ -34,6 +34,7 @@ class Webtoon extends StatelessWidget {
         children: [
           Thumbnail(
             thumb: thumb,
+            id: id,
           ),
           SizedBox(
             height: 10,

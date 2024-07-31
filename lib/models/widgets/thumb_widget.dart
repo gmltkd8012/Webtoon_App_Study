@@ -4,10 +4,12 @@ import 'package:flutter/foundation.dart';
 
 class Thumbnail extends StatelessWidget {
   final String thumb;
+  final String id;
 
   const Thumbnail({
     super.key,
     required this.thumb,
+    required this.id,
   });
 
   @override
@@ -22,21 +24,28 @@ class Thumbnail extends StatelessWidget {
       };
     }
 
-    return Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 15,
-              offset: Offset(10, 15),
-              color: Colors.black.withOpacity(0.5),
-            )
-          ]
-      ),
-      width: 250,
-      clipBehavior: Clip.hardEdge,
-      child: Image.network(thumb,
-        headers: headers,
+    return GestureDetector(
+      child: Center(
+        child: Hero(
+          tag: id,
+          child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                    offset: Offset(10, 15),
+                    color: Colors.black.withOpacity(0.5),
+                  )
+                ]
+            ),
+            width: 250,
+            clipBehavior: Clip.hardEdge,
+            child: Image.network(thumb,
+              headers: headers,
+            ),
+          ),
+        ),
       ),
     );
   }

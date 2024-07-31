@@ -31,6 +31,7 @@ class DetailScreen extends StatelessWidget {
           ),
           Thumbnail(
             thumb: thumb,
+            id: id,
           ),
         ],
       ),
