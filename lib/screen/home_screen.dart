@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nomad_class_study04/models/widgets/webtoon_widget.dart';
+import 'package:nomad_class_study04/widgets/webtoon_widget.dart';
 import 'package:nomad_class_study04/services/api_service.dart';
 
 import '../models/webtoon.dart';
@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
   HomeScreen ({super.key});
 
   final Future<List<WebtoonModel>> webtoons = ApiService.getTodaysToons();
+  
 
   @override
   Widget build(BuildContext context) {

@@ -5,6 +5,4 @@ class WebtoonModel {
       title = json['title'],
       thumb = json['thumb'],
       id = json['id'];
-
-
 }

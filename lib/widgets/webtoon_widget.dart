@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nomad_class_study04/models/widgets/thumb_widget.dart';
+import 'package:nomad_class_study04/widgets/thumb_widget.dart';
 import 'package:nomad_class_study04/screen/detail_screen.dart';
 
 class Webtoon extends StatelessWidget {
